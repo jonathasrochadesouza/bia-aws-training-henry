@@ -60,3 +60,11 @@ O deploy é automatizado via **AWS CodePipeline + CodeBuild**:
 1. **Source** — Push no GitHub dispara o pipeline
 2. **Build** — CodeBuild executa o `buildspec.yml`, gera a imagem Docker e faz push para o ECR
 3. **Deploy** — ECS atualiza o serviço com a nova imagem (rolling update)
+
+## Recriar Infraestrutura
+
+```bash
+cd terraform
+terraform init
+terraform apply
+```
