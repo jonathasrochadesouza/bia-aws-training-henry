@@ -102,3 +102,15 @@ terraform apply
 
 > **Ação necessária:** Substitua `<seu-github-token>` no `.kiro/agents/bia.json` pelo seu Personal Access Token do GitHub (Settings → Developer settings → Personal access tokens).
 > O token precisa de permissões `repo` e `workflow`.
+
+## Agente de IA — Kiro (BIA)
+
+O projeto conta com um agente de IA especializado em DevOps AWS configurado no Kiro.
+
+Para ativar o agente BIA no chat:
+
+```
+/agent swap bia
+```
+
+O agente tem acesso aos MCPs de PostgreSQL, ECS, GitHub, Terraform, Docker e CloudWatch, além do contexto completo do projeto via `README.md`, `AmazonQ.md` e regras em `.kiro/rules/`.
