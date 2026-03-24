@@ -13,7 +13,7 @@ RUN cd client && npm install --legacy-peer-deps --loglevel=error
 
 COPY . .
 
-RUN cd client && VITE_API_URL=https://formacao.jkrocha.com.br/ npm run build
+RUN cd client && VITE_API_URL=https://formacao.jkrocha.com.br npm run build
 
 RUN cd client && npm prune --production && rm -rf node_modules/.cache
 
