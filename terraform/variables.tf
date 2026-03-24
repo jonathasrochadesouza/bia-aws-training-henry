@@ -85,3 +85,25 @@ variable "acm_certificate_arn" {
   description = "ARN do certificado ACM para HTTPS no ALB"
   default     = "arn:aws:acm:us-east-1:328958872848:certificate/1100cacc-4d47-43df-a42f-a9fd36a9f3ae"
 }
+
+# Variáveis do GitHub para o pipeline CI/CD
+variable "github_owner" {
+  description = "Usuário ou organização do GitHub"
+  default     = "jonathasrochadesouza"
+}
+
+variable "github_repo" {
+  description = "Nome do repositório no GitHub"
+  default     = "bia-aws-training-henry"
+}
+
+variable "github_branch" {
+  description = "Branch que dispara o pipeline"
+  default     = "main"
+}
+
+variable "github_oauth_token" {
+  description = "Token OAuth do GitHub para o CodePipeline (sensitive)"
+  sensitive   = true
+  default     = "" # preencha antes do apply ou use TF_VAR_github_oauth_token
+}

@@ -90,6 +90,7 @@ terraform apply
 │   ├── alb.tf            # ALB + Target Groups + Listeners + Listener Rules
 │   ├── ecs.tf            # Cluster ECS + ASG + Task Definitions + Services
 │   ├── rds.tf            # RDS PostgreSQL (prod + dev)
+│   ├── pipeline.tf       # CodePipeline + CodeBuild + IAM + S3
 │   └── outputs.tf        # Outputs pós-apply
 ├── compose.yml           # Docker Compose (ambiente local)
 ├── Dockerfile            # Imagem da aplicação
