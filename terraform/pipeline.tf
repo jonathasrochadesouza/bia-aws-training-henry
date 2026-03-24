@@ -119,7 +119,7 @@ resource "aws_iam_role_policy" "codebuild_policy" {
 # Build: docker build → docker push ECR → gera imagedefinitions.json
 
 resource "aws_codebuild_project" "bia" {
-  name          = "bia-build"
+  name          = "bia-build-prod"
   description   = "Build da imagem Docker da BIA e push para o ECR"
   service_role  = aws_iam_role.codebuild_role.arn
   build_timeout = 20 # minutos
