@@ -28,6 +28,33 @@
           "ALLOW_WRITE": "false",
           "ALLOW_SENSITIVE_DATA": "false"
         }
+      },
+      "github": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "<seu-github-token>"
+        }
+      },
+      "terraform": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-terraform"],
+        "env": {
+          "TERRAFORM_WORKING_DIR": "/home/ec2-user/bia-aws-training-henry/terraform"
+        }
+      },
+      "docker": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-docker"],
+        "env": {}
+      },
+      "awslabs.cloudwatch-mcp-server": {
+        "command": "uvx",
+        "args": ["--from", "awslabs-cloudwatch-mcp-server", "cloudwatch-mcp-server"],
+        "env": {
+          "FASTMCP_LOG_LEVEL": "ERROR",
+          "AWS_REGION": "us-east-1"
+        }
       }
     },
     "tools": [
