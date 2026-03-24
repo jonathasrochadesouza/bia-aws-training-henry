@@ -97,3 +97,8 @@ terraform apply
 ├── buildspec.yml         # AWS CodeBuild (CI/CD)
 └── package.json          # Dependências Node.js
 ```
+
+## Configuração do Agente BIA (MCP)
+
+> **Ação necessária:** Substitua `<seu-github-token>` no `.kiro/agents/bia.json` pelo seu Personal Access Token do GitHub (Settings → Developer settings → Personal access tokens).
+> O token precisa de permissões `repo` e `workflow`.
