@@ -68,3 +68,31 @@ cd terraform
 terraform init
 terraform apply
 ```
+
+---
+
+## Estrutura do Projeto
+
+```
+/
+├── api/                  # Rotas e controllers do backend
+├── client/               # Aplicação React (frontend)
+├── config/               # Configurações da aplicação
+├── database/             # Migrations e seeds (Sequelize)
+├── scripts/              # Scripts auxiliares
+├── tests/                # Testes unitários (Jest)
+├── docs/                 # Documentação
+├── terraform/            # Infraestrutura como código (IaC)
+│   ├── main.tf           # Provider AWS
+│   ├── variables.tf      # Variáveis (região, VPC, imagens, credenciais)
+│   ├── ecr.tf            # Repositório ECR
+│   ├── security_groups.tf# Security Groups (bia-alb, bia-ec2, bia-db, bia-web, bia-dev)
+│   ├── alb.tf            # ALB + Target Groups + Listeners + Listener Rules
+│   ├── ecs.tf            # Cluster ECS + ASG + Task Definitions + Services
+│   ├── rds.tf            # RDS PostgreSQL (prod + dev)
+│   └── outputs.tf        # Outputs pós-apply
+├── compose.yml           # Docker Compose (ambiente local)
+├── Dockerfile            # Imagem da aplicação
+├── buildspec.yml         # AWS CodeBuild (CI/CD)
+└── package.json          # Dependências Node.js
+```
